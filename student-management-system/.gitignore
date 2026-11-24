@@ -1,0 +1,16 @@
+# Node / Frontend
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+dist-ssr/
+*.local
+
+# Java / Maven
+target/
+backend/target/
+*.class
+*.jar
+
+# Logs & temp
+*.log
