@@ -3,7 +3,10 @@
  * Communicates with Java Spring Boot backend on /api
  */
 
-const BASE_URL = 'http://localhost:8081/api';
+const BASE_URL = import.meta.env.VITE_API_URL || 
+  (typeof window !== 'undefined' && window.location.hostname === 'localhost' 
+    ? 'http://localhost:8081/api' 
+    : '/api');
 
 /**
  * Handle API responses and extract JSON data or error messages
